@@ -52,11 +52,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'anfisa.urls'
 
+
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Искать шаблоны на уровне проекта
-        'DIRS': [f'{BASE_DIR}/templates', ],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
